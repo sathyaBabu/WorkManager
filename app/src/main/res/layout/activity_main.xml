@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/OneTimeWork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/onetimework"
+        app:layout_constraintBottom_toTopOf="@+id/PeriodicWork"
+        app:layout_constraintStart_toStartOf="@+id/PeriodicWork"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/PeriodicWork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginBottom="13dp"
+        android:text="@string/periodicwork"
+        app:layout_constraintBottom_toTopOf="@+id/parallelwork"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OneTimeWork" />
+
+    <Button
+        android:id="@+id/ChainableWork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/chainable_work"
+        app:layout_constraintBottom_toTopOf="@+id/CancelPeriodicWork"
+        app:layout_constraintStart_toStartOf="@+id/parallelwork"
+        app:layout_constraintTop_toBottomOf="@+id/parallelwork" />
+
+    <Button
+        android:id="@+id/parallelwork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:text="@string/parallelwork"
+        app:layout_constraintBottom_toTopOf="@+id/ChainableWork"
+        app:layout_constraintStart_toStartOf="@+id/PeriodicWork"
+        app:layout_constraintTop_toBottomOf="@+id/PeriodicWork" />
+
+    <Button
+        android:id="@+id/CancelPeriodicWork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        android:text="@string/cancel_periodicwork"
+        app:layout_constraintBottom_toTopOf="@+id/workwithconstraints"
+        app:layout_constraintStart_toStartOf="@+id/ChainableWork"
+        app:layout_constraintTop_toBottomOf="@+id/ChainableWork" />
+
+    <Button
+        android:id="@+id/workwithconstraints"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:text="@string/work_with_constraints"
+        app:layout_constraintBottom_toTopOf="@+id/WorkWithData"
+        app:layout_constraintStart_toStartOf="@+id/CancelPeriodicWork"
+        app:layout_constraintTop_toBottomOf="@+id/CancelPeriodicWork" />
+
+    <Button
+        android:id="@+id/WorkWithData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="65dp"
+        android:text="@string/work_with_data"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/workwithconstraints"
+        app:layout_constraintTop_toBottomOf="@+id/workwithconstraints" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="392dp"
+        android:layout_height="261dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/MyWorkWithDataMessages"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
